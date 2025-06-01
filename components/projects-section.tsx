@@ -65,12 +65,13 @@ const projects: Project[] = [
   {
     id: 5,
     title: "AI Platform for Parents",
-    description: "AI-powered system to predict equipment failures before they occur",
-    technologies: ["Python", "TensorFlow", "Time Series Analysis", "Docker"],
-    image: "/placeholder.svg?height=300&width=600",
+    description: "A smart hub that turns family preferences into memorable moments.
+Parents create a single profile describing their kids ages and interests, our recommendation engine instantly suggests age-appropriate activities; from STEM workshops to outdoor sports days and creative crafts—sourced from local partners and online events.",
+    technologies: ["React", "Django", "Transformers"],
+    image: "/pAI.png?height=300&width=600",
     github: "https://github.com",
     details:
-      "Created a predictive maintenance platform that analyzes sensor data from industrial equipment to forecast potential failures. The system uses deep learning to identify patterns that precede breakdowns, allowing for preventative maintenance.",
+      "Under the hood, a model combines collaborative filtering with content-based embeddings to surface fresh ideas, while a lightweight sentiment-analysis module monitors feedback on completed activities. ",
   },
 ]
 

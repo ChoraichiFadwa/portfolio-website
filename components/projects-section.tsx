@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Sentiment Analysis of Product Reviews",
-    description: "Developed a full-stack NLP pipeline that cleans and analyzes Amazon software reviews, re-labels them with a BERT teacher model, and uses an ensemble of classic classifiers to accurately identify positive, neutral, and negative sentiment while highlighting the words that drive each opinion.",
+    description: "Developed a full-stack NLP pipeline that cleans and analyzes Amazon software reviews, re-labels them with a BERT teacher model, and uses an ensemble of classic classifiers to accurately identify positive, neutral, and negative sentiment while highlighting the words that drive each opinion. A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
     technologies: ["Python", "Transformers"],
     image: "/p1.png?height=300&width=600",
     github: "https://github.com/ChoraichiFadwa/TextMiningSentimentAnalysis.git",
@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Fraud and Money Laundering Detection with Deep Learning",
-    description: "Financial fraud and money-laundering outpace traditional rule-based controls, prompting a shift to deep-learning models that flag illicit activity in real time.",
+    description: "Financial fraud and money-laundering outpace traditional rule-based controls, prompting a shift to deep-learning models that flag illicit activity in real time. This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles",
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
     image: "/p2.png?height=300&width=600",
     // details:

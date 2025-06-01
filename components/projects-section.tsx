@@ -38,15 +38,15 @@ const projects: Project[] = [
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
     image: "/p2.png?height=300&width=600",
     github: "https://github.com",
-    // details:
-    //   " ",
+    details:
+      " ",
   },
   {
     id: 3,
     title: "Credit Card Approval Predictor",
     description: "Build a machine-learning model that automates credit-card approval, replacing slow, error-prone manual reviews with quick, data-driven decisions.",
     technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost"],
-    image: "/placeholder.svg?height=300&width=600",
+    image: "/p3.png?height=300&width=600",
     github: "https://github.com",
     demo: "https://demo.com",
     details:

@@ -25,7 +25,7 @@ const projects: Project[] = [
     title: "Sentiment Analysis of Product Reviews",
     description: "Developed a full-stack NLP pipeline that cleans and analyzes Amazon software reviews, re-labels them with a BERT teacher model, and uses an ensemble of classic classifiers to accurately identify positive, neutral, and negative sentiment while highlighting the words that drive each opinion.",
     technologies: ["Python", "Transformers"],
-    image: "/sentiment-analysis.svg?height=300&width=600",
+    image: "/p1.png?height=300&width=600",
     github: "https://github.com/ChoraichiFadwa/TextMiningSentimentAnalysis.git",
     demo: "https://demo.com",
     details:

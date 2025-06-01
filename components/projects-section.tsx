@@ -29,7 +29,7 @@ const projects: Project[] = [
     github: "https://github.com/ChoraichiFadwa/TextMiningSentimentAnalysis.git",
     demo: "https://demo.com",
     details:
-      "Built an end-to-end NLP pipeline that cleans 100 k+ Amazon software reviews, re-labels them with a BERT model, and predicts positive / neutral / negative sentiment. A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
+      "A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const projects: Project[] = [
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
     image: "/p2.png?height=300&width=600",
     details:
-      " This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 AI-driven systems—to outline current best practices, challenges, and research directions for building fast, transparent, and reliable detection tools in banking.",
+      " This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles.",
   },
   {
     id: 3,
@@ -54,12 +54,12 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Financial Assistant",
-    description: "This Financial Assistant is a full-stack web application that merges everyday budgeting with live cryptocurrency insights. Users enter their income once, log expenses under intuitive categories, and the app instantly visualizes how each category stacks up against monthly totals and year-to-date spending, revealing trends and overspending at a glance. A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas. Together, these features create a single, elegant workspace where personal cash-flow management and market-savvy decision-making coexist seamlessly.",
+    description: "This Financial Assistant is a full-stack web application that merges everyday budgeting with live cryptocurrency insights. Users enter their income once, log expenses under intuitive categories, and the app instantly visualizes how each category stacks up against monthly totals and year-to-date spending, revealing trends and overspending at a glance.",
     technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
     image: "/pFinance.png?height=300&width=600",
     github: "https://github.com",
     details:
-      " ",
+      " A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas.",
   },
   {
     id: 5,

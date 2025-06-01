@@ -38,8 +38,8 @@ const projects: Project[] = [
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
     image: "/p2.png?height=300&width=600",
     github: "https://github.com",
-    details:
-      " ",
+    // details:
+    //   " ",
   },
   {
     id: 3,

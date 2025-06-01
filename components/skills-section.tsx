@@ -55,7 +55,8 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Cloud & DevOps",
     description: "Infrastructure and deployment",
-    skills: ["Docker", "Kubernetes", "CI/CD", "Git", "Serverless Architecture"],
+    skills: ["Docker", "Git"], 
+    // , "Kubernetes", "CI/CD"
   },
 ]
 

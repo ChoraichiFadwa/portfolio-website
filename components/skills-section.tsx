@@ -24,8 +24,7 @@ const skillCategories: SkillCategory[] = [
     description: "Statistical analysis and machine learning",
     skills: [
       "Python",
-      "TensorFlow",
-      "PyTorch",
+      "Transformers",
       "Statistical Analysis",
       "Data Visualization",
       "Pandas",
@@ -36,30 +35,27 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Web Development",
     description: "Frontend and backend technologies",
-    skills: ["React", "Node.js", "JavaScript", "TypeScript", "HTML/CSS", "Next.js", "RESTful APIs", "GraphQL"],
+    skills: ["React", "Angular", "Spring Boot", "Django", "MySQL", "PostgreSQL", "JavaScript", "HTML/CSS", "RESTful APIs"],
   },
-  {
-    name: "Big Data",
-    description: "Processing and analyzing large datasets",
-    skills: ["SQL", "NoSQL", "Hadoop", "Spark", "Data Warehousing", "ETL Pipelines", "Data Modeling"],
-  },
+  // {
+  //   name: "Big Data",
+  //   description: "Processing and analyzing large datasets",
+  //   skills: ["SQL", "NoSQL", "Hadoop", "Spark", "Data Warehousing", "ETL Pipelines", "Data Modeling"],
+  // },
   {
     name: "IoT",
     description: "Internet of Things technologies",
     skills: [
       "Arduino",
-      "Raspberry Pi",
-      "MQTT",
       "Sensor Integration",
       "Embedded Systems",
       "IoT Protocols",
-      "Edge Computing",
     ],
   },
   {
     name: "Cloud & DevOps",
     description: "Infrastructure and deployment",
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Git", "Linux", "Serverless Architecture"],
+    skills: ["Docker", "Kubernetes", "CI/CD", "Git", "Serverless Architecture"],
   },
 ]
 

@@ -27,7 +27,7 @@ const timelineItems: TimelineItem[] = [
   },
   {
     id: 2,
-    title: "End of studies entrenship",
+    title: "End of studies internship",
     organization: "FSTM",
     period: "2024",
     description:

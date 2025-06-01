@@ -61,28 +61,28 @@ const skillCategories: SkillCategory[] = [
 
 const certifications: Certification[] = [
   {
-    name: "TensorFlow Developer Certificate",
-    issuer: "Google",
-    date: "2022",
-    url: "https://example.com",
+    name: "Supervised Machine Learning",
+    issuer: "Datacamp",
+    date: "2025",
+    url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/1e9312ad72efd88fccbf474b40f9a3264873aed1",
   },
   {
-    name: "AWS Certified Machine Learning – Specialty",
-    issuer: "Amazon Web Services",
-    date: "2022",
-    url: "https://example.com",
+    name: "Introduction to Data and Data Science",
+    issuer: "365 Data Science",
+    date: "2024",
+    url: "https://learn.365datascience.com/certificates/CC-A2FCA0CB47/",
   },
   {
-    name: "Data Science Professional Certificate",
-    issuer: "DataCamp",
-    date: "2021",
-    url: "https://example.com",
-  },
-  {
-    name: "IoT Fundamentals",
+    name: "Network Security ",
     issuer: "Cisco",
-    date: "2021",
-    url: "https://example.com",
+    date: "2024",
+    url: "https://www.credly.com/badges/c4a91b07-1e1e-4873-8ad0-29ec0303e0a3",
+  },
+  {
+    name: "CCNA: Introduction to Networks",
+    issuer: "Cisco",
+    date: "2024",
+    url: "https://www.credly.com/badges/49d43ce2-3fb5-499f-aec9-47f1615aae31",
   },
 ]
 

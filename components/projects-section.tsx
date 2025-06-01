@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "Fraud and Money Laundering Detection with Deep Learning",
     description: "Financial fraud and money-laundering outpace traditional rule-based controls, prompting a shift to deep-learning models that flag illicit activity in real time. This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 AI-driven systems—to outline current best practices, challenges, and research directions for building fast, transparent, and reliable detection tools in banking.",
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
-    image: "/placeholder.svg?height=300&width=600",
+    image: "/p2.png?height=300&width=600",
     github: "https://github.com",
     details:
       " ",
@@ -50,7 +50,7 @@ const projects: Project[] = [
     github: "https://github.com",
     demo: "https://demo.com",
     details:
-      "Developed a fraud detection system using ensemble machine learning techniques. The model achieved 97% accuracy in identifying suspicious transactions and reduced false positives by 30% compared to previous systems.",
+      " ",
   },
   {
     id: 4,

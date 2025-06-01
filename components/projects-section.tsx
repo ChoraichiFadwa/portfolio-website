@@ -65,8 +65,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "AI Platform for Parents",
-    description: "A smart hub that turns family preferences into memorable moments.
-Parents create a single profile describing their kids ages and interests, our recommendation engine instantly suggests age-appropriate activities; from STEM workshops to outdoor sports days and creative crafts—sourced from local partners and online events.",
+    description: "A smart hub that turns family preferences into memorable moments. Parents create a single profile describing their kids ages and interests, our recommendation engine instantly suggests age-appropriate activities; from STEM workshops to outdoor sports days and creative crafts—sourced from local partners and online events.",
     technologies: ["React", "Django", "Transformers"],
     image: "/pAI.png?height=300&width=600",
     github: "https://github.com",

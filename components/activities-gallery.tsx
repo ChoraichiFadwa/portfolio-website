@@ -18,31 +18,17 @@ interface Activity {
 const activities: Activity[] = [
   {
     id: 1,
-    title: "AR Workshop Organizer",
-    description: "Organized and led workshops on Augmented Reality development for beginners",
+    title: "Workshops Organizer",
+    description: "Organized workshops on Augmented Reality, Virtual Reality, C# and development for beginners",
     image: "/placeholder.svg?height=300&width=600",
-    funFact: "Our first workshop had only 5 attendees, but by the third one we had over 50 people!",
+    funFact: "Our first workshop had only 2 attendees, but by the last one we had over 50 people!",
   },
   {
     id: 2,
-    title: "Hackathon Participant",
-    description: "Participated in 3 hackathons, winning 'Best Use of AI' in the University Tech Challenge",
+    title: "Events Moderator",
+    description: "As the ITECH Club Events, Workshop, and Organization Manager, I just love to speak, so I took on this role in ECPC and ITECH Talk.",
     image: "/placeholder.svg?height=300&width=600",
-    funFact: "Our winning project was built in just 18 hours with no sleep and lots of coffee!",
-  },
-  {
-    id: 3,
-    title: "Tech Blog Writer",
-    description: "Write articles about emerging technologies and their applications in everyday life",
-    image: "/placeholder.svg?height=300&width=600",
-    funFact: "My article on 'AI in Healthcare' was featured in a national tech magazine",
-  },
-  {
-    id: 4,
-    title: "Open Source Contributor",
-    description: "Contribute to open-source projects related to data visualization and IoT connectivity",
-    image: "/placeholder.svg?height=300&width=600",
-    funFact: "My first pull request was accepted after 7 revisions and a lot of learning!",
+    funFact: "I once accidentally gave the first prize to the person who came second!",
   },
 ]
 

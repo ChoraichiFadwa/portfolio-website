@@ -68,7 +68,7 @@ export default function ProjectsSection() {
   const [activeProject, setActiveProject] = useState<number | null>(null)
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       {projects.map((project) => (
         <motion.div
           key={project.id}
@@ -81,8 +81,9 @@ export default function ProjectsSection() {
             className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg"
             onMouseEnter={() => setActiveProject(project.id)}
             onMouseLeave={() => setActiveProject(null)}
+            onTouchStart={() => setActiveProject(project.id === activeProject ? null : project.id)}
           >
-            <div className="relative overflow-hidden h-48">
+            <div className="relative overflow-hidden h-40 sm:h-48">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
                 style={{
@@ -91,23 +92,23 @@ export default function ProjectsSection() {
                 }}
               />
             </div>
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-lg sm:text-xl">{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="mb-4">
+            <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+              <div className="mb-4 flex flex-wrap">
                 {project.technologies.map((tech) => (
                   <Badge key={tech} variant="secondary" className="mr-2 mb-2">
                     {tech}
                   </Badge>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground line-clamp-3 sm:line-clamp-none">
                 {activeProject === project.id ? project.details : `${project.details.substring(0, 100)}...`}
               </p>
             </CardContent>
-            <CardFooter className="flex justify-between">
+            <CardFooter className="flex justify-between p-4 sm:p-6 pt-0 sm:pt-0">
               {project.github && (
                 <Button variant="outline" size="sm" asChild>
                   <Link href={project.github} target="_blank">

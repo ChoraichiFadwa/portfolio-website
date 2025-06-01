@@ -59,11 +59,11 @@ const timelineItems: TimelineItem[] = [
 
 export default function ExperienceTimeline() {
   return (
-    <div className="relative">
-      {/* Timeline line */}
-      <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-blue-200 dark:bg-blue-900 transform -translate-x-1/2" />
+    <div className="relative max-w-5xl mx-auto">
+      {/* Timeline line - hidden on mobile, visible on md and up */}
+      <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-[#651C32]/20 dark:bg-[#651C32]/30 transform -translate-x-1/2 hidden md:block" />
 
-      <div className="space-y-12">
+      <div className="space-y-8 md:space-y-12">
         {timelineItems.map((item, index) => (
           <motion.div
             key={item.id}
@@ -73,34 +73,40 @@ export default function ExperienceTimeline() {
             viewport={{ once: true }}
             className={`relative flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
           >
-            {/* Timeline dot */}
-            <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-blue-500 transform -translate-x-1/2 z-10" />
+            {/* Timeline dot - hidden on mobile, visible on md and up */}
+            <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-[#651C32] dark:bg-[#651C32] transform -translate-x-1/2 z-10 hidden md:block" />
 
             {/* Date for mobile */}
-            <div className="md:hidden mb-2 pl-6 text-sm font-medium text-blue-600 dark:text-blue-400">
-              {item.period}
-            </div>
+            <div className="md:hidden mb-2 text-sm font-medium text-[#651C32] dark:text-[#651C32]">{item.period}</div>
 
             {/* Content */}
-            <div className="pl-6 md:pl-0 md:w-1/2 md:px-8">
+            <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-10" : "md:pl-10"}`}>
               <Card
                 className={`
-                border-l-4 
-                ${item.type === "education" ? "border-l-blue-500" : "border-l-cyan-500"}
+                border-l-4 dark:bg-gray-800/70
+                ${
+                  item.type === "education"
+                    ? "border-l-[#651C32] dark:border-l-[#651C32]"
+                    : "border-l-[#8A2846] dark:border-l-[#8A2846]"
+                }
               `}
               >
-                <CardHeader>
-                  <div className="hidden md:block text-sm font-medium text-blue-600 dark:text-blue-400 mb-1">
+                <CardHeader className="p-4 sm:p-6">
+                  <div className="hidden md:block text-sm font-medium text-[#651C32] dark:text-[#651C32] mb-1">
                     {item.period}
                   </div>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.organization}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl dark:text-white">{item.title}</CardTitle>
+                  <CardDescription className="dark:text-gray-300">{item.organization}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="mb-4">{item.description}</p>
-                  <div>
+                <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+                  <p className="mb-4 text-sm sm:text-base dark:text-gray-200">{item.description}</p>
+                  <div className="flex flex-wrap">
                     {item.skills.map((skill) => (
-                      <Badge key={skill} variant="outline" className="mr-2 mb-2">
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="mr-2 mb-2 text-xs sm:text-sm dark:bg-[#651C32]/20 dark:text-white dark:hover:bg-[#651C32]/30"
+                      >
                         {skill}
                       </Badge>
                     ))}

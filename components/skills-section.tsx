@@ -2,14 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-interface Skill {
+interface SkillCategory {
   name: string
-  level: number
-  category: string
+  description?: string
+  skills: string[]
 }
 
 interface Certification {
@@ -19,20 +18,49 @@ interface Certification {
   url?: string
 }
 
-const skills: Skill[] = [
-  { name: "Python", level: 90, category: "Programming" },
-  { name: "TensorFlow", level: 85, category: "AI/ML" },
-  { name: "PyTorch", level: 75, category: "AI/ML" },
-  { name: "SQL", level: 80, category: "Data" },
-  { name: "NoSQL", level: 70, category: "Data" },
-  { name: "React", level: 65, category: "Web Dev" },
-  { name: "Node.js", level: 60, category: "Web Dev" },
-  { name: "Docker", level: 75, category: "DevOps" },
-  { name: "AWS", level: 65, category: "Cloud" },
-  { name: "Arduino/Raspberry Pi", level: 80, category: "IoT" },
-  { name: "MQTT", level: 70, category: "IoT" },
-  { name: "Data Visualization", level: 85, category: "Data" },
-  { name: "Statistical Analysis", level: 80, category: "Data" },
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Data Science",
+    description: "Statistical analysis and machine learning",
+    skills: [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Statistical Analysis",
+      "Data Visualization",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+    ],
+  },
+  {
+    name: "Web Development",
+    description: "Frontend and backend technologies",
+    skills: ["React", "Node.js", "JavaScript", "TypeScript", "HTML/CSS", "Next.js", "RESTful APIs", "GraphQL"],
+  },
+  {
+    name: "Big Data",
+    description: "Processing and analyzing large datasets",
+    skills: ["SQL", "NoSQL", "Hadoop", "Spark", "Data Warehousing", "ETL Pipelines", "Data Modeling"],
+  },
+  {
+    name: "IoT",
+    description: "Internet of Things technologies",
+    skills: [
+      "Arduino",
+      "Raspberry Pi",
+      "MQTT",
+      "Sensor Integration",
+      "Embedded Systems",
+      "IoT Protocols",
+      "Edge Computing",
+    ],
+  },
+  {
+    name: "Cloud & DevOps",
+    description: "Infrastructure and deployment",
+    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Git", "Linux", "Serverless Architecture"],
+  },
 ]
 
 const certifications: Certification[] = [
@@ -62,49 +90,46 @@ const certifications: Certification[] = [
   },
 ]
 
-const categories = Array.from(new Set(skills.map((skill) => skill.category)))
-
 export default function SkillsSection() {
   return (
     <Tabs defaultValue="skills" className="w-full">
-      <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
-        <TabsTrigger value="skills">Skills</TabsTrigger>
-        <TabsTrigger value="certifications">Certifications</TabsTrigger>
+      <TabsList className="grid w-full max-w-xs sm:max-w-md mx-auto grid-cols-2 mb-6 sm:mb-8 bg-white/80 dark:bg-gray-800/90">
+        <TabsTrigger value="skills" className="data-[state=active]:bg-[#651C32] data-[state=active]:text-white">
+          Skills
+        </TabsTrigger>
+        <TabsTrigger value="certifications" className="data-[state=active]:bg-[#651C32] data-[state=active]:text-white">
+          Certifications
+        </TabsTrigger>
       </TabsList>
 
       <TabsContent value="skills">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {categories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          {skillCategories.map((category, categoryIndex) => (
             <motion.div
-              key={category}
+              key={category.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card>
-                <CardHeader>
-                  <CardTitle>{category}</CardTitle>
-                  <CardDescription>
-                    {category === "AI/ML" && "Artificial Intelligence & Machine Learning"}
-                    {category === "IoT" && "Internet of Things"}
-                    {category === "DevOps" && "Development Operations"}
-                    {category === "Web Dev" && "Web Development"}
-                  </CardDescription>
+              <Card className="h-full dark:bg-gray-800/70">
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-lg sm:text-xl dark:text-white">{category.name}</CardTitle>
+                  {category.description && (
+                    <CardDescription className="text-sm dark:text-gray-300">{category.description}</CardDescription>
+                  )}
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {skills
-                      .filter((skill) => skill.category === category)
-                      .map((skill, index) => (
-                        <div key={skill.name} className="space-y-1.5">
-                          <div className="flex justify-between">
-                            <span className="text-sm font-medium">{skill.name}</span>
-                            <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                          </div>
-                          <Progress value={skill.level} className="h-2" />
-                        </div>
-                      ))}
+                <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="text-xs sm:text-sm bg-[#651C32]/10 text-[#651C32] dark:bg-[#651C32]/20 dark:text-white hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -114,7 +139,7 @@ export default function SkillsSection() {
       </TabsContent>
 
       <TabsContent value="certifications">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.name}
@@ -123,17 +148,17 @@ export default function SkillsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle>{cert.name}</CardTitle>
-                  <CardDescription>
+              <Card className="h-full dark:bg-gray-800/70">
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-lg sm:text-xl dark:text-white">{cert.name}</CardTitle>
+                  <CardDescription className="text-sm dark:text-gray-300">
                     {cert.issuer} • {cert.date}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
                   <Badge
                     variant="outline"
-                    className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="text-xs sm:text-sm cursor-pointer hover:bg-[#651C32] hover:text-white dark:bg-[#651C32]/20 dark:text-white dark:hover:bg-[#651C32] transition-colors"
                   >
                     {cert.url ? (
                       <a href={cert.url} target="_blank" rel="noopener noreferrer" className="block">

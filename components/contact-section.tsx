@@ -49,7 +49,7 @@ export default function ContactSection() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -57,11 +57,11 @@ export default function ContactSection() {
         viewport={{ once: true }}
       >
         <Card>
-          <CardHeader>
-            <CardTitle>Send a Message</CardTitle>
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">Send a Message</CardTitle>
             <CardDescription>Fill out the form below to get in touch with me.</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Input
@@ -90,7 +90,7 @@ export default function ContactSection() {
                 />
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-sm">Rate your interest:</span>
+                <span className="text-xs sm:text-sm">Rate your interest:</span>
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button key={star} type="button" onClick={() => handleStarClick(star)} className="focus:outline-none">
                     <svg
@@ -98,7 +98,7 @@ export default function ContactSection() {
                       viewBox="0 0 24 24"
                       fill={star <= formState.stars ? "currentColor" : "none"}
                       stroke="currentColor"
-                      className="w-5 h-5 text-yellow-500"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500"
                     >
                       <path
                         strokeLinecap="round"
@@ -154,65 +154,41 @@ export default function ContactSection() {
         viewport={{ once: true }}
       >
         <Card className="h-full">
-          <CardHeader>
-            <CardTitle>Connect With Me</CardTitle>
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">Connect With Me</CardTitle>
             <CardDescription>Find me on these platforms or send me an email directly.</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
-                <Mail className="h-6 w-6 text-blue-600 dark:text-blue-300" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium">Email</h3>
-                <p className="text-sm text-muted-foreground">
-                  <a href="mailto:john.doe@example.com" className="hover:underline">
-                    john.doe@example.com
-                  </a>
-                </p>
-              </div>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+            <div className="flex justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
+              <a
+                href="mailto:john.doe@example.com"
+                className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
+              </a>
+              <a
+                href="https://github.com/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
+              </a>
+              <a
+                href="https://linkedin.com/in/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
+              </a>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
-                <Github className="h-6 w-6 text-blue-600 dark:text-blue-300" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium">GitHub</h3>
-                <p className="text-sm text-muted-foreground">
-                  <a
-                    href="https://github.com/johndoe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    github.com/johndoe
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
-                <Linkedin className="h-6 w-6 text-blue-600 dark:text-blue-300" />
-              </div>
-              <div>
-                <h3 className="text-lg font-medium">LinkedIn</h3>
-                <p className="text-sm text-muted-foreground">
-                  <a
-                    href="https://linkedin.com/in/johndoe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    linkedin.com/in/johndoe
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 p-4 bg-muted rounded-lg">
-              <p className="text-sm">
+            <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-muted rounded-lg">
+              <p className="text-xs sm:text-sm text-center">
                 Looking for internships, research projects, or entry-level roles in Big Data, IoT, and AI. Open to
                 remote or on-site opportunities.
               </p>

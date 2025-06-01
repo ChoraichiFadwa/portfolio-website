@@ -49,7 +49,7 @@ export default function ContactSection() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    <div className="flex justify-center items-center min-h-screen gap-6 md:gap-8">
 {/*       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -177,7 +177,7 @@ export default function ContactSection() {
                 <Github className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
               </a>
               <a
-                href="www.linkedin.com/in/fadwa-choraichi-"
+                href="https://www.linkedin.com/in/fadwa-choraichi-/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"

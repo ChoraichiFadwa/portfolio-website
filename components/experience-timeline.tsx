@@ -17,29 +17,29 @@ interface TimelineItem {
 const timelineItems: TimelineItem[] = [
   {
     id: 1,
-    title: "Master's in Data Science",
-    organization: "Tech University",
-    period: "2022 - Present",
+    title: "Master's in Big Data and IOT",
+    organization: "ENSAM Casablanca",
+    period: "2024 - Present",
     description:
       "Specializing in Big Data Analytics and Machine Learning. Research focus on IoT data processing and real-time analytics.",
-    skills: ["Machine Learning", "Big Data", "Statistical Analysis"],
+    skills: ["Machine Learning", "Big Data", "Statistical Analysis", "Agile", "IOT", "Cloud Computing", "Blockchain", "Java", "Design Patterns"],
     type: "education",
   },
   {
     id: 2,
-    title: "Data Science Intern",
-    organization: "AI Solutions Inc.",
-    period: "Summer 2022",
+    title: "End of studies entrenship",
+    organization: "FSTM",
+    period: "2024",
     description:
-      "Worked on developing predictive models for customer behavior analysis. Implemented data pipelines for processing large datasets.",
-    skills: ["Python", "TensorFlow", "SQL", "Data Visualization"],
+      "Developed a dynamic and user-friendly web application for geolocating and showcasing historical monuments in Marrakech. The platform integrates interactive maps to help users explore the city's cultural landmarks efficiently. ",
+    skills: ["React", "Django""],
     type: "experience",
   },
   {
     id: 3,
-    title: "Bachelor's in Computer Science",
-    organization: "State University",
-    period: "2018 - 2022",
+    title: "Bachelor's in Computer Science Networks and Multimedia",
+    organization: "FSTM",
+    period: "2021 - 2024",
     description:
       "Graduated with honors. Focused on artificial intelligence and data structures. Senior project on IoT-based smart agriculture system.",
     skills: ["Algorithms", "Software Development", "AI Fundamentals"],

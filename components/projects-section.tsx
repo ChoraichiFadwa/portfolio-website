@@ -76,7 +76,7 @@ const projects: Project[] = [
     title: "Flood Alert System",
     description: "A real-time flood alert system using IoT sensors and wireless networks to monitor water levels and trigger alerts in critical conditions. Integrated with the Blynk app for remote monitoring and early warnings.",
     technologies: ["ESP32 WROOM", "DHT11 Sensor", "Blynk IoT App"],
-    image: "/pAI.png?height=300&width=600",
+    image: "/pflood.png?height=300&width=600",
     github: "https://github.com",
     demo: "https://demo.com",
     // details:

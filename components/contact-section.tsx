@@ -161,14 +161,14 @@ export default function ContactSection() {
           <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             <div className="flex justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
               <a
-                href="mailto:john.doe@example.com"
+                href="mailto:choraichifadwa@gmail.com"
                 className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
               </a>
               <a
-                href="https://github.com/johndoe"
+                href="https://github.com/ChoraichiFadwa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"
@@ -177,7 +177,7 @@ export default function ContactSection() {
                 <Github className="h-6 w-6 sm:h-8 sm:w-8 text-[#651C32] dark:text-[#651C32]" />
               </a>
               <a
-                href="https://linkedin.com/in/johndoe"
+                href="www.linkedin.com/in/fadwa-choraichi-"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 sm:p-4 rounded-full bg-[#651C32]/10 dark:bg-[#651C32]/20 hover:bg-[#651C32]/20 dark:hover:bg-[#651C32]/30 transition-colors"

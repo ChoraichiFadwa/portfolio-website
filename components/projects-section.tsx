@@ -62,6 +62,16 @@ const projects: Project[] = [
     details:
       "Created a predictive maintenance platform that analyzes sensor data from industrial equipment to forecast potential failures. The system uses deep learning to identify patterns that precede breakdowns, allowing for preventative maintenance.",
   },
+  {
+    id: 5,
+    title: "Financial Assistant",
+    description: "AI-powered system to predict equipment failures before they occur",
+    technologies: ["Python", "TensorFlow", "Time Series Analysis", "Docker"],
+    image: "/placeholder.svg?height=300&width=600",
+    github: "https://github.com",
+    details:
+      "Created a predictive maintenance platform that analyzes sensor data from industrial equipment to forecast potential failures. The system uses deep learning to identify patterns that precede breakdowns, allowing for preventative maintenance.",
+  },
 ]
 
 export default function ProjectsSection() {

@@ -42,7 +42,7 @@ const timelineItems: TimelineItem[] = [
     period: "2021 - 2024",
     description:
       "Studied concepts in computer networks and multimedia, with hands-on experience in image and audio processing. Worked with raw multimedia data and applied machine learning models. Also developed a simple compression extension inspired by JPEG and TIFF formats.",
-    skills: ["Algorithms", "Software Development", "AI Fundamentals"],
+    skills: ["Algorithms", "Multimedia Databases", "Networks", "Data Transmission"],
     type: "education",
   },
 ]

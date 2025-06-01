@@ -21,7 +21,7 @@ const timelineItems: TimelineItem[] = [
     organization: "ENSAM Casablanca",
     period: "2024 - Present",
     description:
-      "Specializing in Big Data Analytics and Machine Learning. Research focus on IoT data processing and real-time analytics.",
+      "Specializing in Big Data Analytics and Machine Learning.",
     skills: ["Machine Learning", "Big Data", "Statistical Analysis", "Agile", "IOT", "Cloud Computing", "Blockchain", "Java", "Design Patterns"],
     type: "education",
   },
@@ -41,19 +41,9 @@ const timelineItems: TimelineItem[] = [
     organization: "FSTM",
     period: "2021 - 2024",
     description:
-      "Graduated with honors. Focused on artificial intelligence and data structures. Senior project on IoT-based smart agriculture system.",
+      "Studied concepts in computer networks and multimedia, with hands-on experience in image and audio processing. Worked with raw multimedia data and applied machine learning models. Also developed a simple compression extension inspired by JPEG and TIFF formats.",
     skills: ["Algorithms", "Software Development", "AI Fundamentals"],
     type: "education",
-  },
-  {
-    id: 4,
-    title: "Research Assistant",
-    organization: "University AI Lab",
-    period: "2020 - 2022",
-    description:
-      "Assisted in research on natural language processing and sentiment analysis. Contributed to two published papers.",
-    skills: ["NLP", "Research Methodology", "Academic Writing"],
-    type: "experience",
   },
 ]
 

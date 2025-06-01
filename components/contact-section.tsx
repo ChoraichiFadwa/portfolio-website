@@ -155,7 +155,7 @@ export default function ContactSection() {
       >
         <Card className="h-full">
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-lg sm:text-xl">Connect With Me</CardTitle>
+{/*             <CardTitle className="text-lg sm:text-xl">Connect With Me</CardTitle> */}
             <CardDescription>Find me on these platforms or send me an email directly.</CardDescription>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">

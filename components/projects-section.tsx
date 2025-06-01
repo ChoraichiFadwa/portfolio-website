@@ -78,7 +78,7 @@ const projects: Project[] = [
     technologies: ["ESP32 WROOM", "DHT11 Sensor", "Blynk IoT App"],
     image: "/pflood.png?height=300&width=600",
     github: "https://github.com",
-    demo: "https://demo.com",
+    demo: "https://vimeo.com/1089553612/9a499fe3da?share=copy",
     // details:
     //   "Under the hood, a model combines collaborative filtering with content-based embeddings to surface fresh ideas, while a lightweight sentiment-analysis module monitors feedback on completed activities. ",
   },

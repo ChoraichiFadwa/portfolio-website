@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "Financial Assistant",
     description: "This Financial Assistant is a full-stack web application that merges everyday budgeting with live cryptocurrency insights. Users enter their income once, log expenses under intuitive categories, and the app instantly visualizes how each category stacks up against monthly totals and year-to-date spending, revealing trends and overspending at a glance. A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas. Together, these features create a single, elegant workspace where personal cash-flow management and market-savvy decision-making coexist seamlessly.",
     technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
-    image: "/pattern.png?height=300&width=600",
+    image: "/pattern.svg?height=300&width=600",
     github: "https://github.com",
     details:
       " ",

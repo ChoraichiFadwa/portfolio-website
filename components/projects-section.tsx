@@ -22,14 +22,14 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Sentiment Analysis Dashboard",
-    description: "Real-time sentiment analysis of social media data with interactive visualizations",
-    technologies: ["Python", "TensorFlow", "React", "D3.js"],
+    title: "Sentiment Analysis of Product Reviews",
+    description: "Developed a full-stack NLP pipeline that cleans and analyzes Amazon software reviews, re-labels them with a BERT teacher model, and uses an ensemble of classic classifiers to accurately identify positive, neutral, and negative sentiment while highlighting the words that drive each opinion.",
+    technologies: ["Python", "Transformers"],
     image: "/placeholder.svg?height=300&width=600",
-    github: "https://github.com",
+    github: "https://github.com/ChoraichiFadwa/TextMiningSentimentAnalysis.git",
     demo: "https://demo.com",
     details:
-      "Built a comprehensive dashboard that analyzes sentiment from Twitter and Reddit data streams. Implemented natural language processing algorithms to categorize emotions and created interactive visualizations to display trends over time.",
+      "Built an end-to-end NLP pipeline that cleans 100 k+ Amazon software reviews, re-labels them with a BERT model, and predicts positive / neutral / negative sentiment. A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
   },
   {
     id: 2,

@@ -32,7 +32,7 @@ const timelineItems: TimelineItem[] = [
     period: "2024",
     description:
       "Developed a dynamic and user-friendly web application for geolocating and showcasing historical monuments in Marrakech. The platform integrates interactive maps to help users explore the city's cultural landmarks efficiently. ",
-    skills: ["React", "Django""],
+    skills: ["React", "Django"],
     type: "experience",
   },
   {

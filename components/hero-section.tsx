@@ -103,7 +103,7 @@ export default function HeroSection() {
               Big Data & IoT Student | Future AI Explorer
             </h2>
             <p className="text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto dark:text-gray-200">
-              Passionate about emerging technologies at the intersection of data science and artificial intelligence..
+              Passionate about emerging technologies at the intersection of data science and artificial intelligence.
               Always open to collaboration and excited to learn from new challenges.
             </p>
           </motion.div>

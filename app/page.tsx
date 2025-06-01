@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 sm:py-16 md:py-20 bg-muted/30">
+      <section id="contact" className="py-6 sm:py-8 md:py-10 bg-muted/3">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Get in Touch</h2>
           <ContactSection />
@@ -59,7 +59,7 @@ export default function Home() {
       <footer className="py-6 sm:py-8 border-t">
         <div className="container mx-auto px-4 text-center">
           <p className="text-xs sm:text-sm text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} Fadwa Choraichi. All rights reserved.
           </p>
         </div>
       </footer>

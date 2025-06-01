@@ -33,7 +33,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "IoT Smart Home System",
+    title: "Fraud and Money Laundering Detection with Deep Learning",
     description: "Connected device ecosystem for home automation and energy monitoring",
     technologies: ["Arduino", "Raspberry Pi", "MQTT", "Node.js"],
     image: "/placeholder.svg?height=300&width=600",
@@ -43,7 +43,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Fraud Detection Algorithm",
+    title: "Credit Card Approval Predictor",
     description: "Machine learning model to identify fraudulent transactions in financial data",
     technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost"],
     image: "/placeholder.svg?height=300&width=600",

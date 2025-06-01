@@ -28,8 +28,8 @@ const projects: Project[] = [
     image: "/p1.png?height=300&width=600",
     github: "https://github.com/ChoraichiFadwa/TextMiningSentimentAnalysis.git",
     demo: "https://demo.com",
-    details:
-      "A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
+    // details:
+    //   "A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
   },
   {
     id: 2,
@@ -37,8 +37,8 @@ const projects: Project[] = [
     description: "Financial fraud and money-laundering outpace traditional rule-based controls, prompting a shift to deep-learning models that flag illicit activity in real time.",
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
     image: "/p2.png?height=300&width=600",
-    details:
-      " This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles.",
+    // details:
+    //   " This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles.",
   },
   {
     id: 3,
@@ -48,8 +48,8 @@ const projects: Project[] = [
     image: "/p3.png?height=300&width=600",
     github: "https://github.com",
     demo: "https://demo.com",
-    details:
-      " ",
+    // details:
+    //   " ",
   },
   {
     id: 4,
@@ -58,8 +58,8 @@ const projects: Project[] = [
     technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
     image: "/pFinance.png?height=300&width=600",
     github: "https://github.com",
-    details:
-      " A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas.",
+    // details:
+    //   " A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas.",
   },
   {
     id: 5,
@@ -68,8 +68,8 @@ const projects: Project[] = [
     technologies: ["React", "Django", "Transformers"],
     image: "/pAI.png?height=300&width=600",
     github: "https://github.com",
-    details:
-      "Under the hood, a model combines collaborative filtering with content-based embeddings to surface fresh ideas, while a lightweight sentiment-analysis module monitors feedback on completed activities. ",
+    // details:
+    //   "Under the hood, a model combines collaborative filtering with content-based embeddings to surface fresh ideas, while a lightweight sentiment-analysis module monitors feedback on completed activities. ",
   },
 ]
 
@@ -113,9 +113,9 @@ export default function ProjectsSection() {
                   </Badge>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground line-clamp-3 sm:line-clamp-none">
+{/*               <p className="text-sm text-muted-foreground line-clamp-3 sm:line-clamp-none">
                 {activeProject === project.id ? project.details : `${project.details.substring(0, 100)}...`}
-              </p>
+              </p> */}
             </CardContent>
             <CardFooter className="flex justify-between p-4 sm:p-6 pt-0 sm:pt-0">
               {project.github && (

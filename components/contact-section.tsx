@@ -153,7 +153,7 @@ export default function ContactSection() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <Card className="h-full">
+        <Card className="w-full h-full">
           <CardHeader className="p-4 sm:p-6">
 {/*             <CardTitle className="text-lg sm:text-xl">Connect With Me</CardTitle> */}
             <CardDescription>Find me on these platforms or send me an email directly.</CardDescription>

@@ -100,7 +100,7 @@ export default function HeroSection() {
               </span>
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-4 md:mb-6 text-muted-foreground dark:text-gray-300">
-              Big Data & IoT Student | Future AI Explorer
+              Data Engineer - Big Data & IoT Student | Future AI Explorer
             </h2>
             <p className="text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto dark:text-gray-200">
               Passionate about emerging technologies at the intersection of data science and artificial intelligence.

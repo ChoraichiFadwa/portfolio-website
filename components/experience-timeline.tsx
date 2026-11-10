@@ -17,16 +17,36 @@ interface TimelineItem {
 const timelineItems: TimelineItem[] = [
   {
     id: 1,
+    title: "End of studies internship",
+    organization: "Axians ICT (Vinci Energies)",
+    period: "Feb 2026 - Jul 2026",
+    description:
+      "Designed and built CareMonitor, a prototype AI-augmented CCTV monitoring system for hospital emergency waiting rooms: person detection and tracking, pose-based pain indicators, age estimation and role classification, a deterioration alert state machine, real-time alerts through FastAPI and WebSockets, and a PostgreSQL star-schema data warehouse for analytics.",
+    skills: ["Computer Vision", "YOLOv8", "BoT-SORT", "MediaPipe", "CLIP", "FastAPI", "PostgreSQL", "MQTT"],
+    type: "experience",
+  },
+  {
+    id: 2,
     title: "Master's in Big Data and IOT",
     organization: "ENSAM Casablanca",
-    period: "2024 - Present",
+    period: "2024 - 2026",
     description:
-      "Specializing in Big Data Analytics and Machine Learning.",
+      "Specialized in Big Data Analytics and Machine Learning.",
     skills: ["Machine Learning", "Big Data", "Statistical Analysis", "Agile", "IOT", "Cloud Computing", "Blockchain", "Java", "Design Patterns"],
     type: "education",
   },
   {
-    id: 2,
+    id: 3,
+    title: "Internship (PFA)",
+    organization: "Centre d'Ingénierie Pédagogique et d'Innovation, UM5R Rabat",
+    period: "Jul 2025 - Sep 2025",
+    description:
+      "Built the back-end of Ecolead, a serious game platform, with FastAPI, along with KPI dashboards. Researched and proposed the game's educational content: three finance career paths (investment banker, portfolio manager, financial analyst).",
+    skills: ["Python", "FastAPI", "React", "KPI Dashboards"],
+    type: "experience",
+  },
+  {
+    id: 4,
     title: "End of studies internship",
     organization: "FSTM",
     period: "2024",
@@ -36,7 +56,7 @@ const timelineItems: TimelineItem[] = [
     type: "experience",
   },
   {
-    id: 3,
+    id: 5,
     title: "Bachelor's in Computer Science Networks and Multimedia",
     organization: "FSTM",
     period: "2021 - 2024",

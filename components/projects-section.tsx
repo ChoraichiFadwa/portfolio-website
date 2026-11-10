@@ -13,15 +13,47 @@ interface Project {
   title: string
   description: string
   technologies: string[]
-  image: string
+  image?: string
   github?: string
   demo?: string
-  details: string
+  details?: string
 }
 
 const projects: Project[] = [
   {
     id: 1,
+    title: "CareMonitor: AI Monitoring for Emergency Waiting Rooms",
+    description: "End-of-studies project at Axians. A prototype CCTV analytics system that tracks patients in hospital emergency waiting rooms and flags possible deterioration: YOLOv8 + BoT-SORT tracking, MediaPipe pose features for pain indicators (LogReg / GRU), ViT age estimation, CLIP zero-shot role classification and an EWMA-based alert state machine. Designed for on-premise use, with real-time alerts over FastAPI/WebSockets and a PostgreSQL star schema for analytics.",
+    technologies: ["Python", "YOLOv8", "MediaPipe", "CLIP", "FastAPI", "PostgreSQL"],
+  },
+  {
+    id: 2,
+    title: "ReviewSense: Company Reputation from Customer Reviews",
+    description: "Predicts the polarity of customer reviews (123k Trustpilot reviews, 1,680 companies) and turns it into a reputation score per company and sector. Traced data cleaning with quarantined rows, a leakage-free grouped split, 8 models compared, 0.934 macro-F1 on companies never seen in training, and a star-schema datamart for BI. Interactive Streamlit demo.",
+    technologies: ["Python", "Scikit-learn", "Streamlit", "SQLite"],
+    github: "https://github.com/ChoraichiFadwa/ReviewSense",
+    demo: "https://reviewsense-fadwa.streamlit.app/",
+  },
+  {
+    id: 3,
+    title: "Real-Time CDC Platform",
+    description: "A change data capture pipeline that streams database changes in real time with Debezium and Kafka.",
+    technologies: ["Debezium", "Kafka", "Docker"],
+  },
+  {
+    id: 4,
+    title: "Bank-to-GL Reconciliation Engine",
+    description: "A Python engine that reconciles bank transactions against general ledger entries using a three-pass matching strategy, and produces an exception report for unmatched items. Built and tested on a synthetic dataset.",
+    technologies: ["Python", "Pandas"],
+  },
+  {
+    id: 5,
+    title: "Banking Consumer Assistant (RAG + Agent)",
+    description: "A chatbot that answers bank customers' credit questions from Moroccan consumer-protection law and Bank Al-Maghrib circulars, cites its sources, and runs loan simulations on a customer's own (mock) data. Includes an evaluation framework covering retrieval, tool calls, answer faithfulness and safety.",
+    technologies: ["Python", "RAG", "pgvector", "FastAPI", "LLM Agents"],
+  },
+  {
+    id: 6,
     title: "Sentiment Analysis of Product Reviews",
     description: "Developed a full-stack NLP pipeline that cleans and analyzes Amazon software reviews, re-labels them with a BERT teacher model, and uses an ensemble of classic classifiers to accurately identify positive, neutral, and negative sentiment while highlighting the words that drive each opinion. A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
     technologies: ["Python", "Transformers"],
@@ -32,7 +64,7 @@ const projects: Project[] = [
     //   "A soft-voting ensemble (Linear SVM + LogReg + Naïve Bayes) cut neutral-class errors by 38 % and pushed macro-F1 to 82 %.",
   },
   {
-    id: 2,
+    id: 7,
     title: "Fraud and Money Laundering Detection with Deep Learning",
     description: "Financial fraud and money-laundering outpace traditional rule-based controls, prompting a shift to deep-learning models that flag illicit activity in real time. This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles",
     technologies: ["Deep Learning", "Blockchain", "X-AI"],
@@ -41,7 +73,7 @@ const projects: Project[] = [
     //   " This review distills insights from three key studies—on explainable AI for AML, a high-accuracy DNN for fraud detection, and a survey of 112 research articles.",
   },
   {
-    id: 3,
+    id: 8,
     title: "Credit Card Approval Predictor",
     description: "Build a machine-learning model that automates credit-card approval, replacing slow, error-prone manual reviews with quick, data-driven decisions.",
     technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost"],
@@ -52,7 +84,7 @@ const projects: Project[] = [
     //   " ",
   },
   {
-    id: 4,
+    id: 9,
     title: "Financial Assistant",
     description: "This Financial Assistant is a full-stack web application that merges everyday budgeting with live cryptocurrency insights. Users enter their income once, log expenses under intuitive categories, and the app instantly visualizes how each category stacks up against monthly totals and year-to-date spending, revealing trends and overspending at a glance.",
     technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
@@ -62,7 +94,7 @@ const projects: Project[] = [
     //   " A dedicated crypto dashboard streams real-time prices; when a user selects the “Recommend” action on any coin, the system computes a rolling correlation matrix and highlights the five cryptocurrencies that move most closely with the chosen asset—useful for quick diversification checks or thematic investing ideas.",
   },
   {
-    id: 5,
+    id: 10,
     title: "AI Platform for Parents",
     description: "A smart hub that turns family preferences into memorable moments. Parents create a single profile describing their kids ages and interests, our recommendation engine instantly suggests age-appropriate activities; from STEM workshops to outdoor sports days and creative crafts—sourced from local partners and online events.",
     technologies: ["React", "Django", "Transformers"],
@@ -72,7 +104,7 @@ const projects: Project[] = [
     //   "Under the hood, a model combines collaborative filtering with content-based embeddings to surface fresh ideas, while a lightweight sentiment-analysis module monitors feedback on completed activities. ",
   },
     {
-    id: 6,
+    id: 11,
     title: "Flood Alert System",
     description: "A real-time flood alert system using IoT sensors and wireless networks to monitor water levels and trigger alerts in critical conditions. Integrated with the Blynk app for remote monitoring and early warnings.",
     technologies: ["ESP32 WROOM", "DHT11 Sensor", "Blynk IoT App"],
@@ -104,13 +136,22 @@ export default function ProjectsSection() {
             onTouchStart={() => setActiveProject(project.id === activeProject ? null : project.id)}
           >
             <div className="relative overflow-hidden h-40 sm:h-48">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
-                style={{
-                  backgroundImage: `url(${project.image})`,
-                  transform: activeProject === project.id ? "scale(1.05)" : "scale(1)",
-                }}
-              />
+              {project.image ? (
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    transform: activeProject === project.id ? "scale(1.05)" : "scale(1)",
+                  }}
+                />
+              ) : (
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#651C32] to-[#8A2846] px-6 text-center transition-transform duration-500"
+                  style={{ transform: activeProject === project.id ? "scale(1.05)" : "scale(1)" }}
+                >
+                  <span className="text-lg sm:text-xl font-semibold text-white">{project.title.split(":")[0]}</span>
+                </div>
+              )}
             </div>
             <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-lg sm:text-xl">{project.title}</CardTitle>
